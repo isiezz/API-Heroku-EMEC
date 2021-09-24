@@ -1,3 +1,5 @@
-"monki_numbers":{
-	"monki_brasil" : "118"
+{
+  "brasil": 10,
+  "eua": 20,
+  "campo_mourao": 5
 }

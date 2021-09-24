@@ -1,38 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
+</head>
+<body>
 <h1>Quantos macacos existem em cada país?</h1>
 <p>Selecione o país:</p>
-
-	<form method="post" action="">
-	<div>
-
-		<label for="Brasil">Brasil</label>
-		<input name="Brasil" id="Brasil" >
-
-	</div>
-	&nbsp
-	<div>
-
-		<label for="EUA">Estados Unidos</label>
-		<input name="EUA" id="EUA" >  
-
-	</div>  
-	&nbsp
-	<div>
-
-		<label for="Canada">Canadá</label>
-		<input name="Canada" id="Canada" >  
-
-	</div>  
-	&nbsp
-	<div>
-
-		<input type="submit" value="brasil" formaction="/brasil">
-		<input type="submit" value="eua" formaction="/eua">   
-		<input type="submit" value="canada" formaction="/canada"> 
-			</div>
-    
-		</form>
+	<form method="get">
+    {% for pais in chaves %}
+      <input type="submit" value="{{pais}}" formaction="/mamacos/{{pais}}">
+    {% endfor %}
+	</form>
 	</body>
 </html>
